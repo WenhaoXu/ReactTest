@@ -4,7 +4,7 @@ import './App.css';
 import AddContain from './AddContain';
 import  Contains from  './Contains'
 class App extends Component{
- 
+
 
 
   render() {
@@ -14,7 +14,8 @@ class App extends Component{
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-          <Contains num="1"/>
+          <Contains counterNum="5"  />
+
       </div>
     );
   }

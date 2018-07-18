@@ -3,10 +3,11 @@ import logo from './logo.svg';
 
 
 export default class AddContain extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            count: 0
+            count: props.num
+
         };
     }
 
@@ -14,18 +15,24 @@ export default class AddContain extends Component {
     addfunction = () => {
         {
             console.log("af");
+            const previousValue=this.state.count;
+            const newValue=previousValue+1;
             this.setState({
-                count: this.state.count + 1
+                count: newValue
             });
+            this.props.onUpdate(newValue,previousValue);
         }
     }
 
     deletfunction = () => {
         {
             console.log("af");
+            const previousValue=this.state.count;
+            const newValue=previousValue-1;
             this.setState({
-                count: this.state.count - 1
+                count: newValue
             });
+            this.props.onUpdate(newValue,previousValue);
         }
     }
 
